@@ -1,0 +1,167 @@
+@charset "utf-8";
+
+@font-face {
+	font-family: "Printvetica";
+	src: url("webfonts/Printvetica/Printvetica.woff") format("woff");
+}
+
+* {
+	margin: 0;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+	* {
+		scroll-behavior: auto;
+	}
+}
+
+body {
+	font-family: "Printvetica", sans-serif;
+	/*background-image: url("assets/background.gif");*/
+}
+
+header {
+	font-size: calc(7px + 3vw);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px;
+	background-color: #333;
+	color: #fff;
+	margin: 0;
+	margin-bottom: 0.5vw;
+}
+
+header h1 {
+	margin: 0.5vw;
+	font-size: 4vw;
+}
+
+header nav ul {
+  	display: flex;
+  	list-style: none;
+  	margin: 0;
+  	padding: 0;
+}
+
+header nav a {
+	color: #fff;
+	text-decoration: none;
+	padding: 1vw;
+}
+
+header nav a:hover {
+	color: #DF00FF;
+}
+
+h2 {
+	margin: 0;
+	font-size: calc(35px + 2vw);
+	margin-top: 50px;
+}
+
+.mainpage {
+	margin: 1vw;
+	text-align: justify;
+	font-size: calc(14px + 1vw);
+}
+
+.what-container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: flex-start;
+}
+
+.what-item {
+/*	order: 5;*/
+/*	flex-grow: 10;*/
+/*	flex-shrink: 0;*/
+	margin: 0.5vw;
+/*	width: 40vw;
+	height: 40vw;*/
+	/*max-width: 900px;*/
+	/*width: 27em;*/
+}
+
+.half {
+	width: 47%;
+	min-width: 350px;
+}
+
+.third {
+	width: 30%;
+	min-width: 350px;
+}
+
+.poetry {
+	font-size: calc(14px + 0.5vw);
+	padding: 0.5vw;
+	border: 1px solid black;
+}
+
+.who-container {
+	display: flex;
+	justify-content:flex-start;
+}
+
+.who-item {
+	margin: 0.5vw;
+}
+
+.learn-container {
+	display: flex;
+	justify-content:flex-start;
+}
+
+.learn-item {
+	margin: 0.5vw;
+}
+
+.social-warning {
+	text-align: center;
+	font-size: calc(7px + 1vw);
+	font-style: italic;
+	margin: 10px;
+}
+
+.social-links {
+	display: flex;
+	justify-content: center;
+  	list-style: none;
+  	margin: 0;
+	padding: 0;
+}
+
+.social-links a {
+	font-size: calc(30px + 1vw);
+	color: #000;
+	text-decoration: none;
+	padding-right: 2vw;
+}
+
+.social-links a:hover {
+	color: #DF00FF;
+}
+
+footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+	background-color: #333;
+	color: #fff;
+	margin: 0;
+	margin-top: 0.5vw;
+	font-size: 20px;
+}
+
+footer p {
+	font-size: calc(10px + .5vw);
+	text-align: center;
+}
