@@ -101,7 +101,7 @@ html{
   display: none;
 }
 
-@media (max-width:908px) {
+@media (max-width:908px) or (only screen and (min-device-width : 320px) and (max-device-width : 480px)) {
   .nav > .nav-header > .nav-title {
 	height: 75px;
 	transition-duration: 0.25s;
