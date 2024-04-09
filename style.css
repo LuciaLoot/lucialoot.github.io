@@ -333,8 +333,17 @@ h1 span{
 		padding: 20px;
 	}
 	
+	
+	.release img{
+		position: relative;
+		width: 50vw;
+		height: auto;
+		margin: 40px;
+	}
+	
+	
 	.release h2{
-		font-size: 10vw;
+		font-size: 7vw;
 		text-align: center;
 		margin-bottom: 0;
 	}
@@ -352,7 +361,7 @@ h1 span{
 	}
 
 	.release-links a{
-		margin: 0 10px 20px 0;
+		margin: 0 10px 30px 0;
 		font-size: 7vw;
 	}
 }
