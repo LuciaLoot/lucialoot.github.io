@@ -257,19 +257,19 @@ h1 span{
 	}
 
 	.typeoflive{
-		font-size:7vw;
+		font-size:5vw;
 	}
 
 	.date{
-		font-size:10vw;
+		font-size:7vw;
 	}
 
 	.hours{
-		font-size:7vw;
+		font-size:5vw;
 	}
 
 	.place{
-		font-size:7vw;
+		font-size:5vw;
 	}
 
 	.price{
@@ -323,7 +323,7 @@ h1 span{
 	margin: 0 5px;
 }
 
-@media (max-width:800px){
+@media (max-width:800px) or (orientation: portrait){
 	.release{
 		display: flex;
 		flex-direction: column;
@@ -334,6 +334,7 @@ h1 span{
 	}
 	
 	.release h2{
+		font-size: 10vw;
 		text-align: center;
 		margin-bottom: 0;
 	}
@@ -341,6 +342,7 @@ h1 span{
 	.release p{
 		margin-top: 0;
 		text-align: center;
+		font-size: 7vw;
 	}
 	
 	.release-links{
@@ -351,7 +353,7 @@ h1 span{
 
 	.release-links a{
 		margin: 0 10px 20px 0;
-		font-size: 10vw;
+		font-size: 7vw;
 	}
 }
 
