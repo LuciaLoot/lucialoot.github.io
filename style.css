@@ -112,7 +112,7 @@ html a:hover{
 	
 	.menu a{
 		text-align: center;
-		font-size: 10vw;
+		font-size: clamp(60px, 7vw, 120px);
 	}
 	
 	.links {
@@ -121,7 +121,7 @@ html a:hover{
 	}
 	
 	.links a{
-		font-size: 10vw;
+		font-size: clamp(60px, 5vw, 120px);
 	}
 }
 
@@ -279,6 +279,15 @@ h1 span{
 	.livedates a{
 		font-size:7vw;
 	}
+}
+
+.pastdates {
+	opacity: 50%;
+	border: 2px solid var(--azure);
+}
+
+.pastdates a {
+	color: var(--light-azure);
 }
 
 .releases_container {
