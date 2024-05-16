@@ -305,19 +305,19 @@ h1 span{
 	}
 
 	.typeoflive{
-		font-size: 5vw;
+		font-size: 4vw;
 	}
 
 	.date{
-		font-size: 7vw;
+		font-size: 5vw;
 	}
 
 	.hours{
-		font-size: 5vw;
+		font-size: 4vw;
 	}
 
 	.place{
-		font-size: 5vw;
+		font-size: 4vw;
 	}
 
 	.price{
@@ -325,7 +325,7 @@ h1 span{
 	}
 	
 	.livedates a{
-		font-size: 7vw;
+		font-size: 4vw;
 	}
 }
 
