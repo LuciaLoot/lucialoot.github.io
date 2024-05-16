@@ -247,46 +247,12 @@ h1 span{
 	color: var(--trans-blue);
 }
 
-@media (max-width:600px) or (orientation: portrait) {
-	.livedates {
-		width: 100%;
-	}
-	
-	.livedates h2{
-		font-size: 10vw;
-	}
-
-	.typeoflive{
-		font-size:5vw;
-	}
-
-	.date{
-		font-size:7vw;
-	}
-
-	.hours{
-		font-size:5vw;
-	}
-
-	.place{
-		font-size:5vw;
-	}
-
-	.price{
-		font-size:5vw;
-	}
-
-	.livedates a{
-		font-size:7vw;
-	}
-}
-
 .pastdates {
 	opacity: 50%;
-	border: 2px solid var(--azure);
+	border: 2px dotted var(--light-azure);
 }
 
-.pastdates a {
+.pastdates a{
 	color: var(--light-azure);
 }
 
