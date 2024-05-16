@@ -132,7 +132,7 @@ html a:hover{
 	
 	.menu a{
 		text-align: center;
-		font-size: 60px;
+		font-size: 7vw;
 	}
 	
 	.links {
@@ -141,7 +141,7 @@ html a:hover{
 	}
 	
 	.links a{
-		font-size: 50px;;
+		font-size: 7vw;
 	}
 }
 
@@ -297,6 +297,36 @@ h1 span{
 
 .pastdates a{
 	color: var(--light-azure);
+}
+
+@media (max-width:800px) or (orientation: portrait){
+	.livedates h2{
+		font-size: 7vw;
+	}
+
+	.typeoflive{
+		font-size: 5vw;
+	}
+
+	.date{
+		font-size: 7vw;
+	}
+
+	.hours{
+		font-size: 5vw;
+	}
+
+	.place{
+		font-size: 5vw;
+	}
+
+	.price{
+		font-size: 3vw;
+	}
+	
+	.livedates a{
+		font-size: 7vw;
+	}
 }
 
 .releases_container {
