@@ -49,15 +49,36 @@ html a:hover{
 	color: var(--trans-blue);
 }
 
-.header{
-	background-image: url("assets/background.webp");
+.background{
+	position: relative;
+}
+
+.background::before{
+	content: "";
+  	position: absolute;
+  	top: 0; left: 0;
+  	width: 100%; height: 100%;
+	background-image: url("assets/passagecafe.webp");
     background-size: cover;
 	background-position: 50% 50%;
-	background-repeat: no-repeat;
+	background-repeat: no-repeat;	
+	-webkit-filter: blur(0px) opacity(75%);
+    -webkit-animation: fadein linear 2s;
+}
+
+@-webkit-keyframes fadein {
+   0% {    -webkit-filter: blur(10px) opacity(0%);}
+  28% { -webkit-filter: blur(10px) opacity(0%);}
+ 100% {  -webkit-filter: blur(0px) opacity(75%);}
+}
+
+.header{
+	position: relative;
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	
 }
 
 .center_nav{
