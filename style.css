@@ -189,7 +189,7 @@ h1 span{
 	color: var(--light-azure);
 	text-align: center;
 	font-weight: 700;
-	font-size: 25px;
+	font-size: 20px;
 	border: 2px solid var(--light-azure);
 	border-radius: 50px;
 	padding: 20px 30px;
@@ -211,7 +211,7 @@ h1 span{
 	text-transform: uppercase;
 	text-align: center;
 	font-weight: 700;
-	font-size: 25px;
+	font-size: 20px;
 	border: 2px solid var(--trans-blue);
 	border-radius: 50px;
 	padding: 20px 30px;
