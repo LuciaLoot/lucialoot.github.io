@@ -434,6 +434,11 @@ h1 span{
 	}
 }
 
+audio{
+	width: 100%;
+	color: crimson;
+}
+
 footer{
 	height: 5vh;
 	display: flex;
