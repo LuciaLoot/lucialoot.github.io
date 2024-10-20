@@ -1,10 +1,10 @@
 <!doctype html>
 <html>
+<head style = "margin:0">
 	
 <!-- FONT AWESOME INIT -->
 <script src="https://kit.fontawesome.com/b49303df4f.js" crossorigin="anonymous"></script>
 	
-<head>
 <meta charset="utf-8">
 	
 <script>
@@ -12,283 +12,668 @@ function displayEmail() {
 	document.getElementById("bookme").innerHTML = 'loot.lucia[at]gmail.com';
 	elm.classList.add('email');
 }
-</script>
+	
+const displayPastGigs = () => {
+   document.getElementById("pastgigs").classList.toggle('hidden');
+ }
 
-<!-- WEBSITE TITLE -->
+function vh(percent) {
+  var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+  return (percent * h) / 100;
+}
+
+window.onscroll = function() {displayReturnToHome()};
+
+function displayReturnToHome() {
+  if (document.documentElement.scrollTop > vh(5)) {
+    document.getElementById("returntohome").className = "returntohome returntohome-shown";
+  } else {
+    document.getElementById("returntohome").className = "returntohome returntohome-hidden";
+  }
+}
+
+</script>
+	
 <title>Lucia Loot ✧⁠*⁠。</title>
-<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 	
 <!-- GOOGLE FONT INIT -->
-<link href="style.css" rel="stylesheet" type="text/css">
+<link href="style.css?v=2" rel="stylesheet" type="text/css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
 
-<div class="background">
-	<div class="header snap-to">
-		<div class="center_nav">
-			<div class="menu text-right">
-				<a href=#live>Live</a>
-				<a href=#music>Music</a>
+<div class="background" id="topofthepage">
+	<div class="nav_container scroll-align">
+		
+		<img src="assets/star_pink.svg" id="star1" class="star" alt=""/>
+	
+	  	<div class="nav">
+			<a class="nav_element" href=#gigs>Gigs</a>
+			<a class="nav_element" href=#music>Music</a>
+			<a class="nav_element" href=#about>About</a>
+			<div class="separator-small"></div>
+			<h1 class="nav_element">Lucia Loot</h1>
+			<div class="separator-beforelinks"></div>
+			<div class="links">
+				<a href="mailto:loot.lucia@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+				<a href="https://www.instagram.com/lootlucia/"><i class="fa fa-instagram"></i></a>
+				<a href="https://soundcloud.com/lucialoot"><i class="fa-brands fa-soundcloud"></i></a>
+				<a href="https://lucialoot.bandcamp.com/"><i class="fa-brands fa-bandcamp"></i></a>
+				<a href="https://open.spotify.com/artist/6XIWHXeg8RwsgRdb3XHTdd?si=r9894m9DTTK4fxVWvDHTWQ"><i class="fa fa-spotify"></i></a>
+				<a href="https://music.apple.com/fr/artist/lucia-loot/1639144883"><i class="fa-brands fa-itunes-note"></i></a>
+				<a href="https://deezer.page.link/4vLcfFFzPMrFAMvR9"><i class="fa-brands fa-deezer"></i></a>
+				<a href="https://www.tiktok.com/@lucialoot"><i class="fa-brands fa-tiktok"></i></a>
 			</div>
-
-			<img class="star" src="assets/STAR.svg" alt="White star in the middle of the screen."/>
-
-			<div class="menu text-left">
-				<a href=#about>About</a>
-				<!--a href=#mixes>Mixes</a-->
-				<!--a href=portfolio.html>Portfolio</a-->
-			</div>
-
-
 		</div>
-
-		<div class="links">
-
-			<a href="https://www.instagram.com/lootlucia/"><i class="fa fa-instagram"></i></a>
-			<a href="https://open.spotify.com/artist/6XIWHXeg8RwsgRdb3XHTdd?si=r9894m9DTTK4fxVWvDHTWQ"><i class="fa fa-spotify"></i></a>
-			<a href="https://music.apple.com/fr/artist/lucia-loot/1639144883"><i class="fa-brands fa-itunes-note"></i></a>
-			<a href="https://deezer.page.link/4vLcfFFzPMrFAMvR9"><i class="fa-brands fa-deezer"></i></a>
-			<a href="https://lucialoot.bandcamp.com/"><i class="fa-brands fa-bandcamp"></i></a>
-			<a href="https://soundcloud.com/lucialoot"><i class="fa-brands fa-soundcloud"></i></a>
-			<a href="https://www.tiktok.com/@lucialoot"><i class="fa-brands fa-tiktok"></i></a>
-			<!--a href="mailto:loot.lucia@gmail.com"><i class="fa-solid fa-envelope"></i></a-->
-		</div>
-		
-		<div class="email-container">
-			<a onclick="displayEmail()" id="bookme" class="email">BOOK ME!</a>
-		</div>
-		
-		<div class="newsletter-signup-container">
-			<a href="https://forms.gle/Un9m3rKLUPDySETP8" class="newsletter-signup"><i class="fa-solid fa-envelope">&nbsp;&nbsp;</i>NEWSLETTER</a>
-		</div>
-		
 	</div>
+</div>	
+	
+	
+<div class="returntohome returntohome-hidden" id="returntohome">
+	<a href="#topofthepage">&uarr; HOME</a>
 </div>
-
+	
 </head>
 
-<body>
-	
-	<div class="page snap-to" id="live">
-		<h1><span>Live</span></h1>
+<body style="margin:0">
 		
-		<div class="livedates_container">
-			
-			<div class="livedates snap-to pastdates">
-				<h2>Les 11 ans de K &amp; Maïa</h2>
-				<!--p class="typeoflive">(DJ Set)</p-->
-				<p class="date">11 / 10 / 24</p>
-				<!--p class="hours">22:00 &rarr; 01:30</p-->
-				<p class="place"><strong>Le Cabaret des Merveilles</strong><br>25 Rue de l'Hirondelle<br>75006 Paris</p>
-				<!--a href="https://www.instagram.com/p/C_tFNNvIt9J/?img_index=4">MORE INFO</a-->
-			</div>
-			
-			<div class="livedates snap-to pastdates">
-				<h2>aARCANE : Digital Garage Core</h2>
-				<!--p class="typeoflive">(DJ Set)</p-->
-				<p class="date">05 / 10 / 24</p>
-				<!--p class="hours">17:00 &rarr; 20:00</p-->
-				<p class="place">Poitiers</p>
-				<!--a href="https://www.instagram.com/p/C_0_p7NMd1F/">MORE INFO</a-->
-			</div>
-	
-			<div class="livedates snap-to pastdates">
-				<h2>Les 11 ans de K &amp; Maïa</h2>
-				<!--p class="typeoflive">(DJ Set)</p-->
-				<p class="date">27 / 09 / 24</p>
-				<!--p class="hours">22:00 &rarr; 01:30</p-->
-				<p class="place"><strong>Le Cabaret des Merveilles</strong><br>25 Rue de l'Hirondelle<br>75006 Paris</p>
-				<!--a href="https://www.instagram.com/p/C_tFNNvIt9J/?img_index=4">MORE INFO</a-->
-			</div>
-					
-			<div class="livedates snap-to pastdates">
-				<h2>Arrêt d'Urgence &amp; Friends</h2>
-				<!--p class="typeoflive">(DJ Set)</p-->
-				<p class="date">26 / 09 / 24</p>
-				<!--p class="hours">22:00 &rarr; 01:30</p-->
-				<p class="place"><strong>La Capsule du Badaboum</strong><br>2 bis Rue des Taillandiers<br>75011 Paris</p>
-				<!--a href="https://www.instagram.com/p/C_3Kdqit4Hg/">MORE INFO</a-->
-			</div>
-			
-			
-			<div class="livedates snap-to pastdates">
-				<h2>Summer Camp : La Plage</h2>
-				<!--p class="typeoflive">(DJ Set)</p-->
-				<p class="date">31 / 08 / 24</p>
-				<!--p class="hours">17:00 &rarr; 20:00</p-->
-				<p class="place"><strong>Glazart</strong><br> 7 Av. de la Prte de la Villette<br>75019 Paris</p>
-				<!--a href="https://www.glazart.com/31-08-summer-camp-after-oclock-x-laplage-26-open-air/">MORE INFO</a-->
-			</div>
-			
-			<div class="livedates snap-to pastdates">
-				<h2>Brillant Bruyant</h2>
-				<!--p class="typeoflive">(DJ Set)</p-->
-				<p class="date">23 / 08 / 24</p>
-				<!--p class="hours">23:00 &rarr; 05:00</p-->
-				<p class="place"><strong>Alimentation Générale</strong><br>12/A Rue Ella Fitzgerald<br>75011 Paris</p>
-				<!--p class="price">Free entry before 01:00<br>8€ after 01:00</p-->
-				<!--a href="https://www.instagram.com/p/C-Ad8sxtPgH/">MORE INFO</a-->
-			</div>
-			
-			<div class="livedates snap-to pastdates">
-				<h2>Hot Waves w/ VENUS CLUB</h2>
-				<!--p class="typeoflive">(DJ Set)</p-->
-				<p class="date">09 / 08 / 24</p>
-				<!--p class="hours">21:00 &rarr; 04:00</p-->
-				<p class="place"><strong>Jardin21</strong><br>12/A Rue Ella Fitzgerald<br>75019 Paris</p>
-				<!--p class="price">Free entry</p-->
-				<!--a href="https://shotgun.live/fr/events/hot-waves-w-venus-club-free-open-air">MORE INFO</a-->
-			</div>
-			
-			<div class="livedates snap-to pastdates">
-				<h2>All Night Long!</h2>
-				<!--p class="typeoflive">(DJ Set)</p-->
-				<p class="date">03 / 08 / 24</p>
-				<!--p class="hours">22:00 &rarr; 01:30</p-->
-				<p class="place"><strong>Le Cabaret des Merveilles</strong><br>25 Rue de l'Hirondelle<br>75006 Paris</p>
-				<!--p class="price">Free<br>Mixité choisie FLNTA</p-->
-				<!--a href="https://www.instagram.com/p/C-FhbROt2yG/?img_index=2">MORE INFO</a-->
-			</div>
-			
-			<div class="livedates snap-to pastdates">
-				<h2>OLYMPE</h2>
-				<!--p class="typeoflive">(DJ Set)</p-->
-				<p class="date">26 / 07 / 24</p>
-				<!--p class="hours">??h &rarr; ??h</p-->
-				<p class="place"><strong>La Rotonde Stalingrad</strong><br>6-8 Place de la Bataille de Stalingrad<br>75019 Paris</p>
-				<!--p class="price">12,99 €</p-->
-				<!--a href="https://shotgun.live/fr/events/olympe-3-scenes-w-venus-club-flirt-collectif-la-houle">MORE INFO</a-->
-			</div>
-			
-			<div class="livedates snap-to pastdates">
-				<h2>Solo!</h2>
-				<!--p class="typeoflive">(DJ Set)</p-->
-				<p class="date">05 / 07 / 24</p>
-				<!--p class="hours">22h &rarr; 01h30</p-->
-				<p class="place"><strong>Le Cabaret des Merveilles</strong><br>25 Rue de l'Hirondelle<br>75006 Paris</p>
-				<!--p class="price">Free | Mixité choisie FLNTA</p-->
-				<!--a href="https://www.instagram.com/p/C8r1F61BvTn/?img_index=3">MORE INFO</a-->
-			</div>
-			
-			<div class="livedates snap-to pastdates">
-				<h2>After-Pride</h2>
-				<!--p class="typeoflive">(DJ Set)</p-->
-				<p class="date">29 / 06 / 24</p>
-				<!--p class="hours">??h &rarr; ??h</p-->
-				<p class="place"><strong>Le Cabaret des Merveilles</strong><br>25 Rue de l'Hirondelle<br>75006 Paris</p>
-				<!--p class="price">Free | Mixité choisie FLNTA</p-->
-				<!--a href="https://www.instagram.com/p/C8anpVHIP8L/?img_index=2">MORE INFO</a-->
-			</div>
-			
-			<div class="livedates snap-to pastdates">
-				<h2>FDLM Vénus Club</h2>
-				<!--p class="typeoflive">(DJ Set)</p-->
-				<p class="date">21 / 06 / 24</p>
-				<!--p class="hours">20h &rarr; 01h45</p-->
-				<p class="place"><strong>La Laverie</strong><br>70 Rue de Ménilmontant<br>75020 Paris</p>
-				<!--p class="price">Free entry</p-->
-				<!--a href="https://www.instagram.com/p/C8KJyjsNSEt/">MORE INFO</a-->
-			</div>
-			
-			<div class="livedates snap-to pastdates">
-				<h2>Soirée de lancement Têtu</h2>
-				<!--p class="typeoflive">(DJ Set)</p-->
-				<p class="date">19 / 06 / 24</p>
-				<!--p class="hours">19h &rarr; 02h</p-->
-				<p class="place"><strong>La Caserne</strong><br>12 Rue Philippe de Girard<br>75010 Paris</p>
-				<!--p class="price">Free entry</p-->
-				<!--a href="https://www.instagram.com/p/C8RzTUpiHmf/">MORE INFO</a-->
-			</div>
-			
-			<div class="livedates snap-to pastdates">
-				<h2>TAP!</h2>
-				<!--p class="typeoflive">(DJ Set)</p-->
-				<p class="date">15 / 06 / 24</p>
-				<!--p class="hours">18h &rarr; 02h</p-->
-				<p class="place"><strong>L'Exode</strong><br>39 Bd de Strasbourg<br>75010 Paris</p>
-				<!--p class="price">Free entry</p-->
-				<!--a href="https://www.instagram.com/p/C76D6aOiI9v/">MORE INFO</a-->
-			</div>
-			
-			<div class="livedates snap-to pastdates">
-				<h2>Passage Café</h2>
-				<!--p class="typeoflive">(DJ Set w/ Mariad &amp; chachacha)</p> <!--B2B Mariad &amp; chachacha)-->
-				<p class="date"> 03 / 05 / 24</p>
-				<!--p class="hours">22h &rarr; 02h</p-->
-				<p class="place"><strong>Le Pavillon des Canaux</strong><br>39 Quai de la Loire<br>75019 Paris</p>
-				<!--p class="price">Free entry / Fundraiser</p-->
-				<!--a href="https://www.instagram.com/p/C5wRG2gLNAv/">MORE INFO</a-->
-			</div>
-			
-		</div>
-	</div>
-	
-	<div class="page snap-to" id="music">
-		<h1><span>Music</span></h1>
+	<div id="gigs" class="gigs-container scroll-align">
 		
-		<div class="releases_container">
-			<div class="release snap-to">
-		    	<img src="assets/ae-cover-850.webp" alt=""/>
-				<div>
-					<h2>AVANT ENCORE</h2>
-					<p class="releasedate">2023</p>
-					<div class="release-links">
-						<a href="https://open.spotify.com/artist/6XIWHXeg8RwsgRdb3XHTdd?si=r9894m9DTTK4fxVWvDHTWQ"><i class="fa fa-spotify"></i></a>
-						<a href="https://music.apple.com/album/avant-encore/1693056802a"><i class="fa-brands fa-itunes-note"></i></a>
-						<a href="https://www.deezer.com/album/454498385"><i class="fa-brands fa-deezer"></i></a>
-						<!--a href="https://deezer.page.link/4vLcfFFzPMrFAMvR9"><i class="fa-brands fa-napster"></i></a-->
+	  <h2>Gigs</h2>
+		
+		<div class="list_of_gigs">
+		
+			<!--div class="gig">
+				
+				<div class="date_desc">
+					<div class="gig_col gig_col1">
+						<div class="gig_line date">
+							<p class="gig_line">DD</p>
+							<p class="gig_line">MM</p>
+						</div>
 					</div>
-				</div>
-			</div>
-			
-			<div class="release snap-to">
-		    	<img src="assets/fl-cover-1800.webp" alt=""/>
-				<div>
-					<h2>FRUITY LEMONADE</h2>
-					<p class="releasedate">2022</p>
-					<div class="release-links">
-						<a href="https://lucialoot.bandcamp.com/album/fruity-lemonade"><i class="fa-brands fa-bandcamp"></i></a>
-						<!--a href="https://open.spotify.com/artist/6XIWHXeg8RwsgRdb3XHTdd?si=r9894m9DTTK4fxVWvDHTWQ"><i class="fa fa-spotify"></i></a>
-						<a href="https://music.apple.com/album/fruity-lemonade/1639170059"><i class="fa-brands fa-itunes-note"></i></a>
-						<a href="https://www.deezer.com/album/345277577"><i class="fa-brands fa-deezer"></i></a>
-						<!--a href="https://deezer.page.link/4vLcfFFzPMrFAMvR9"><i class="fa-brands fa-napster"></i></a-->
-					</div>
-				</div>
-			</div>
-		</div>
-	
-	</div>
-	
-<div class="page snap-to" id="about">
-	<h1><span>About</span></h1>
-	
-	<div class="biophoto-container"><img class="biophoto" src="assets/bio.webp" width="3879" height="5569" alt="Artist portrait photo"/></div>
-	
-	<p class="snap-to">The unclassifiable <strong>Lucia Loot</strong> is quite a strange musician. Sometimes drawing from the roots of <strong>drum &amp; bass</strong>, <strong>dubstep</strong> and <strong>bass music</strong>, sometimes from the robotic glitches of <strong>hyperpop</strong>, she knows how to make us both dance and cry. Inspired by the productions of <strong>Sophie</strong>, the glitches of <strong>Skrillex</strong>, the ambient dubstep of <strong>Burial</strong>, the breakbeats of <strong>Chase &amp; Status</strong>, and the nightcore vocals of <strong>100 Gecs</strong>, the transfeminine producer leads us in all directions.</p>
-	<p>In her debut EP <em><strong>FRUITY LEMONADE</strong></em> (2022), she pays homage to hyperpop and house, the music that helped her survive lockdown. She came back strong with her debut album <em><strong>AVANT ENCORE</strong></em> (2023), the melancholic anthem of a sad android proud of her trans and queer identity. She is planning on releasing several remixes of her latest project in 2024, as well as new tracks soon to be heard in Parisian clubs where the promising DJ will get your feet tapping.</p>
-	<p>Being the lead singer and guitarist of the <strong>Hummingbirds from Saturdays</strong>, and lead guitarist of <strong>Singing Loudly About Yoland</strong>, she is both a producer and a multi-instrumentalist, and has had the opportunity to work on numerous projects, both live and in the studio.</p>
-	<p>She has worked with :</p>
-	<ul class="snap-to">
-		<li><strong>Hummingbirds from Saturdays</strong>: musician, singer-songwriter, producer;</li>
-		<li><strong>Singing Loudly About Yoland</strong>: guitarist, producer;</li>
-		<li><strong>Elvin Reels</strong>: producer, mixing &amp; mastering engineer.</li>
-	</ul>
-</div>
 
+					<div class="gig_col gig_col2">
+						<p class="gig_line club">CLUB</p>
+						<p class="gig_line event">EVENT</p>
+						<p class="gig_line adress">ADRESS</p>
+					</div>
+					
+				</div>
+				
+				<div class="gig_col gig_col3 gig_portrait_switch">
+					<a class="gig_line info" href="">+ INFO</a>
+					<p class="gig_line hours">HR:MN &rarr; HR:MN</p>
+				</div>
+				
+			</div-->
+			
+			<div class="gig tba">
+				
+				<div class="date_desc">
+					<div class="gig_col gig_col1">
+						<div class="gig_line date">
+							<p class="gig_line"></p>
+							<p class="gig_line"></p>
+						</div>
+					</div>
+
+					<div class="gig_col gig_col2">
+						<p class="gig_line club">TBA</p>
+						<p class="gig_line event"></p>
+						<p class="gig_line adress">ADRESS</p>
+					</div>
+					
+				</div>
+				
+				<div class="gig_col gig_col3 gig_portrait_switch">
+					<a class="gig_line info" href="">+ INFO</a>
+					<p class="gig_line hours"> &rarr; </p>
+				</div>
+				
+			</div>
+			
+			<div class="gig-separator"></div>
+			
+		</div>
+		
+	  	<div class="gigbuttons_container">
+			<a onclick="displayEmail()" id="bookme" href="mailto:loot.lucia@gmail.com" class="gigbuttons">BOOK ME!</a>
+			<a onclick="displayPastGigs()" id="pastgigs-button" class="gigbuttons">PAST GIGS</a>
+		</div>
+		
+		<div id="pastgigs" class="hidden">
+			
+			<div class="list_of_gigs">
+				
+				<div class="gig">
+
+					<div class="date_desc">
+						<div class="gig_col gig_col1">
+							<div class="gig_line date">
+								<p class="gig_line">11</p>
+								<p class="gig_line">10</p>
+							</div>
+						</div>
+
+						<div class="gig_col gig_col2">
+							<p class="gig_line club">Le Cabaret des Merveilles</p>
+							<p class="gig_line event">w/ Belladone</p>
+							<p class="gig_line adress">25 Rue de l'Hirondelle, 75006 Paris</p>
+						</div>
+
+					</div>
+
+					<div class="gig_col gig_col3 gig_portrait_switch">
+					</div>
+
+				</div>
+
+				<div class="gig-separator"></div>
+
+				<div class="gig">
+
+					<div class="date_desc">
+						<div class="gig_col gig_col1">
+							<div class="gig_line date">
+								<p class="gig_line">05</p>
+								<p class="gig_line">10</p>
+							</div>
+						</div>
+
+						<div class="gig_col gig_col2">
+							<p class="gig_line club">Poitiers</p>
+							<p class="gig_line event">aARCANE : Digital Garage Core</p>
+							<p class="gig_line adress"></p>
+						</div>
+
+					</div>
+
+					<div class="gig_col gig_col3 gig_portrait_switch">
+					</div>
+
+				</div>
+				
+				<div class="gig-separator"></div>
+				
+				<div class="gig">
+
+					<div class="date_desc">
+						<div class="gig_col gig_col1">
+							<div class="gig_line date">
+								<p class="gig_line">04</p>
+								<p class="gig_line">10</p>
+							</div>
+						</div>
+
+						<div class="gig_col gig_col2">
+							<p class="gig_line club">Le Pavillon des Canaux</p>
+							<p class="gig_line event">KIA × Vénus Club : La Nuit des Voix Féministes</p>
+							<p class="gig_line adress"></p>
+						</div>
+
+					</div>
+
+					<div class="gig_col gig_col3 gig_portrait_switch">
+					</div>
+
+				</div>
+				
+				<div class="gig-separator"></div>
+				
+				<div class="gig">
+
+					<div class="date_desc">
+						<div class="gig_col gig_col1">
+							<div class="gig_line date">
+								<p class="gig_line">27</p>
+								<p class="gig_line">09</p>
+							</div>
+						</div>
+
+						<div class="gig_col gig_col2">
+							<p class="gig_line club">Le Cabaret des Merveilles</p>
+							<p class="gig_line event">Les 11 ans de K &amp; Maïa</p>
+							<p class="gig_line adress">25 Rue de l'Hirondelle, 75006 Paris</p>
+						</div>
+
+					</div>
+
+					<div class="gig_col gig_col3 gig_portrait_switch">
+					</div>
+
+				</div>
+				
+				<div class="gig-separator"></div>
+				
+				<div class="gig">
+
+					<div class="date_desc">
+						<div class="gig_col gig_col1">
+							<div class="gig_line date">
+								<p class="gig_line">26</p>
+								<p class="gig_line">09</p>
+							</div>
+						</div>
+
+						<div class="gig_col gig_col2">
+							<p class="gig_line club">La Capsule du Badaboum</p>
+							<p class="gig_line event">Arrêt d'Urgence &amp; Friends</p>
+							<p class="gig_line adress">2 bis Rue des Taillandiers, 75011 Paris</p>
+						</div>
+
+					</div>
+
+					<div class="gig_col gig_col3 gig_portrait_switch">
+					</div>
+
+				</div>
+				
+				<div class="gig-separator"></div>
+				
+				<div class="gig">
+
+					<div class="date_desc">
+						<div class="gig_col gig_col1">
+							<div class="gig_line date">
+								<p class="gig_line">31</p>
+								<p class="gig_line">08</p>
+							</div>
+						</div>
+
+						<div class="gig_col gig_col2">
+							<p class="gig_line club">Glazart</p>
+							<p class="gig_line event">Summer Camp : La Plage</p>
+							<p class="gig_line adress">7 Av. de la Prte de la Villette, 75019 Paris</p>
+						</div>
+
+					</div>
+
+					<div class="gig_col gig_col3 gig_portrait_switch">
+					</div>
+
+				</div>
+				
+				<div class="gig-separator"></div>
+				
+				<div class="gig">
+
+					<div class="date_desc">
+						<div class="gig_col gig_col1">
+							<div class="gig_line date">
+								<p class="gig_line">23</p>
+								<p class="gig_line">08</p>
+							</div>
+						</div>
+
+						<div class="gig_col gig_col2">
+							<p class="gig_line club">L'Alimentation Générale</p>
+							<p class="gig_line event">Brillant Bruyant</p>
+							<p class="gig_line adress">12/A Rue Ella Fitzgerald, 75011 Paris</p>
+						</div>
+
+					</div>
+
+					<div class="gig_col gig_col3 gig_portrait_switch">
+					</div>
+
+				</div>
+				
+				<div class="gig-separator"></div>
+				
+				<div class="gig">
+
+					<div class="date_desc">
+						<div class="gig_col gig_col1">
+							<div class="gig_line date">
+								<p class="gig_line">09</p>
+								<p class="gig_line">08</p>
+							</div>
+						</div>
+
+						<div class="gig_col gig_col2">
+							<p class="gig_line club">Jardin21</p>
+							<p class="gig_line event">Hot Waves w/ VéNUS CLUB</p>
+							<p class="gig_line adress"></p>
+						</div>
+
+					</div>
+
+					<div class="gig_col gig_col3 gig_portrait_switch">
+					</div>
+
+				</div>
+				
+				<div class="gig-separator"></div>
+				
+				<div class="gig">
+
+					<div class="date_desc">
+						<div class="gig_col gig_col1">
+							<div class="gig_line date">
+								<p class="gig_line">03</p>
+								<p class="gig_line">08</p>
+							</div>
+						</div>
+
+						<div class="gig_col gig_col2">
+							<p class="gig_line club">Le Cabaret des Merveilles</p>
+							<p class="gig_line event">All Night Long!</p>
+							<p class="gig_line adress"></p>
+						</div>
+
+					</div>
+
+					<div class="gig_col gig_col3 gig_portrait_switch">
+					</div>
+
+				</div>
+				
+				<div class="gig-separator"></div>
+				
+				
+				<div class="gig">
+
+					<div class="date_desc">
+						<div class="gig_col gig_col1">
+							<div class="gig_line date">
+								<p class="gig_line">26</p>
+								<p class="gig_line">07</p>
+							</div>
+						</div>
+
+						<div class="gig_col gig_col2">
+							<p class="gig_line club">La Rotonde Stalingrad</p>
+							<p class="gig_line event">OLYMPE</p>
+							<p class="gig_line adress"></p>
+						</div>
+
+					</div>
+
+					<div class="gig_col gig_col3 gig_portrait_switch">
+					</div>
+
+				</div>
+				
+				<div class="gig-separator"></div>
+				
+				<div class="gig">
+
+					<div class="date_desc">
+						<div class="gig_col gig_col1">
+							<div class="gig_line date">
+								<p class="gig_line">05</p>
+								<p class="gig_line">07</p>
+							</div>
+						</div>
+
+						<div class="gig_col gig_col2">
+							<p class="gig_line club">Le Cabaret des Merveilles</p>
+							<p class="gig_line event">All Night Long!</p>
+							<p class="gig_line adress"></p>
+						</div>
+
+					</div>
+
+					<div class="gig_col gig_col3 gig_portrait_switch">
+					</div>
+
+				</div>
+				
+				<div class="gig-separator"></div>
+				
+				<div class="gig">
+
+					<div class="date_desc">
+						<div class="gig_col gig_col1">
+							<div class="gig_line date">
+								<p class="gig_line">29</p>
+								<p class="gig_line">06</p>
+							</div>
+						</div>
+
+						<div class="gig_col gig_col2">
+							<p class="gig_line club">Le Cabaret des Merveilles</p>
+							<p class="gig_line event">After-Pride</p>
+							<p class="gig_line adress"></p>
+						</div>
+
+					</div>
+
+					<div class="gig_col gig_col3 gig_portrait_switch">
+					</div>
+
+				</div>
+				
+				<div class="gig-separator"></div>
+				
+				<div class="gig">
+
+					<div class="date_desc">
+						<div class="gig_col gig_col1">
+							<div class="gig_line date">
+								<p class="gig_line">21</p>
+								<p class="gig_line">06</p>
+							</div>
+						</div>
+
+						<div class="gig_col gig_col2">
+							<p class="gig_line club">Bar de La Laverie</p>
+							<p class="gig_line event">Fête de la Musique w/ Vénus Club</p>
+							<p class="gig_line adress"></p>
+						</div>
+
+					</div>
+
+					<div class="gig_col gig_col3 gig_portrait_switch">
+					</div>
+
+				</div>
+				
+				<div class="gig-separator"></div>
+				
+				<div class="gig">
+
+					<div class="date_desc">
+						<div class="gig_col gig_col1">
+							<div class="gig_line date">
+								<p class="gig_line">19</p>
+								<p class="gig_line">06</p>
+							</div>
+						</div>
+
+						<div class="gig_col gig_col2">
+							<p class="gig_line club">La Caserne</p>
+							<p class="gig_line event">Soirée de lancement Têtu</p>
+							<p class="gig_line adress"></p>
+						</div>
+
+					</div>
+
+					<div class="gig_col gig_col3 gig_portrait_switch">
+					</div>
+
+				</div>
+				
+				<div class="gig-separator"></div>
+				
+				<div class="gig">
+
+					<div class="date_desc">
+						<div class="gig_col gig_col1">
+							<div class="gig_line date">
+								<p class="gig_line">15</p>
+								<p class="gig_line">06</p>
+							</div>
+						</div>
+
+						<div class="gig_col gig_col2">
+							<p class="gig_line club">Bar L'Exode</p>
+							<p class="gig_line event">TAP!</p>
+							<p class="gig_line adress"></p>
+						</div>
+
+					</div>
+
+					<div class="gig_col gig_col3 gig_portrait_switch">
+					</div>
+
+				</div>
+				
+				<div class="gig-separator"></div>
+				
+				<div class="gig">
+
+					<div class="date_desc">
+						<div class="gig_col gig_col1">
+							<div class="gig_line date">
+								<p class="gig_line">03</p>
+								<p class="gig_line">05</p>
+							</div>
+						</div>
+
+						<div class="gig_col gig_col2">
+							<p class="gig_line club">Le Pavillon des Canaux</p>
+							<p class="gig_line event">Soirée de soutien au Passage Café</p>
+							<p class="gig_line adress"></p>
+						</div>
+
+					</div>
+
+					<div class="gig_col gig_col3 gig_portrait_switch">
+					</div>
+
+				</div>
+
+			</div>
+		</div>
 	
-<!--div class="page snap-to" id="mixes">
-	<h1><span>Mixes</span></h1>
+</div>
 	
-	<audio id="audio" src="audio/test.mp3" controls></audio>
-</div-->	
-	<!--div class="page snap-to" id="portfolio">
-		<h1><span>Portfolio</span></h1>
+	<div id="music" class="music-container scroll-align">
+		<img src="assets/star_electric.svg" alt="" id="star2" class="star"/>
+			
+		<h2>Music</h2>
+		
+		<h3>Releases</h3>
+		
+		<div class="releases-container">
+		
+			<div class="release">
+				<img src="assets/covers/trash-cover-1000.webp" alt=""/>
+				
+				<div class="release-info">
+					
+					<h4 class="release-title">trashy demos, bootlegs, and other audio-gifts</h4>
+					
+					<div class="release-date_links">
+						
+						<p class="release-date">2024</p>
+					
+						<div class="release-links">
+							<a href="https://lucialoot.bandcamp.com/album/trashy-demos-bootlegs-and-other-audio-gifts"><i class="fa-brands fa-bandcamp"></i></a>
+						</div>
+						
+					</div>
+				</div>
+				
+			</div>
+			
+			<div class="release">
+		    	<img src="assets/covers/ae-cover-850.webp" alt=""/>
+				
+				<div class="release-info">
+					
+					<h4 class="release-title">AVANT ENCORE</h4>
+					
+					<div class="release-date_links">
+						
+						<p class="release-date">2024</p>
+					
+						<div class="release-links">
+							<a href="https://open.spotify.com/artist/6XIWHXeg8RwsgRdb3XHTdd?si=r9894m9DTTK4fxVWvDHTWQ"><i class="fa fa-spotify"></i></a>
+							<a href="https://music.apple.com/album/avant-encore/1693056802a"><i class="fa-brands fa-itunes-note"></i></a>
+							<a href="https://www.deezer.com/album/454498385"><i class="fa-brands fa-deezer"></i></a>
+						</div>
+					
+					</div>
+				</div>
+				
+			</div>
+			
+			<div class="release">
+				<img src="assets/covers/fl-cover-1800.webp" alt=""/>
+				
+				<div class="release-info">
+					
+					<h4 class="release-title">FRUITY LEMONADE</h4>
+					
+					<div class="release-date_links">
+						
+						<p class="release-date">2022</p>
+					
+						<div class="release-links">
+							<a href="https://lucialoot.bandcamp.com/album/fruity-lemonade"><i class="fa-brands fa-bandcamp"></i></a>
+						</div>
+						
+					</div>
+				</div>
+				
+			</div>
+		
+		</div>
+		
+		<h3 id="mixes-bigtitle">Mixes</h3>
+		
+		<div class="mixes-container">
+			
+			<div class="mix">
+				<img src="assets/mixes/MixesCover1_IG.png" alt=""/>
+				
+				<div class="mix-info">
+					
+					<a class="mix-link" href="https://soundcloud.com/lucialoot/001-eclectic-bass-music-selecta?si=89a0213697f1482fa8a97c4f692d4d73&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing">&rarr; LISTEN &larr; </a>
+					
+				</div>
+				
+			</div>
+		
+		</div>
+		
+	</div>
 	
-	</div-->
+	<div id="about" class="about-container scroll-align">
+		<img src="assets/star_pink.svg" id="star3" class="star" alt=""/>
+		
+	  	<h2>About</h2>
+		
+    	<img src="assets/biophoto.webp" alt="Photo taken pf Lucia Loot during Brillant Bruyant's second party in Paris, at L'Alimentation Générale" id="biophoto"/>
+		
+		<p class="quote"><strong>Music is a spec&shy;trum</strong>, and I'm all over it.</p>
+		
+		<p class="bio scroll-align">
+		<span class="offbit allcaps bold empha-size">Lucia Loot is a french-dutch DJ &amp; producer based in Paris.</span> Active member of the feminist collective <span class="offbit allcaps bold empha-size">Vénus Club</span> she joined recently, she came into contact with music first through producing music from very various and diverse settings, although always alternative music. After founding <span class="offbit allcaps bold empha-size">Big Piaf Music</span>, a French record label and collective of musicians, she started to take interest into DJing as both an art form and a way to link people to the music, and vice-versa.<br><br>Quite resentful towards labels, <span class="offbit bold">the transfeminine and lesbian DJ</span> takes hybridization to the max, blending <strong>Bass Music, UK Garage, Hyperpop, Rave Techno, Baile Funk, and any sound she may stumble upon in her never-ending curiosity</strong>. When she's not showcasing the full mosaic of sounds that fuels her creativity, she is sailing fast on <span class="offbit bold">the new wave of UK Garage and bass music</span> and using her trendy and cutting-edge selecta to unfold a true tidal wave of syncopated rhythms and powerful subs.<br><br>The young producer already has released two solo projects, including <span class="offbit allcaps bold empha-size">'AVANT ENCORE'</span>, a compilation of <strong>melancholic and Hyperpop anthems</strong> from a sad, but proud, android.
+		</p>
+		
+		<div class="footer">
+			<p>&darr; Let's stay in touch!</p>
+			<div class="footer_links_container">
+				<div class="footer_links">
+					<a href="mailto:loot.lucia@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+					<a href="https://www.instagram.com/lootlucia/"><i class="fa fa-instagram"></i></a>
+					<a href="https://soundcloud.com/lucialoot"><i class="fa-brands fa-soundcloud"></i></a>
+					<a href="https://lucialoot.bandcamp.com/"><i class="fa-brands fa-bandcamp"></i></a>
+					<a href="https://open.spotify.com/artist/6XIWHXeg8RwsgRdb3XHTdd?si=r9894m9DTTK4fxVWvDHTWQ"><i class="fa fa-spotify"></i></a>
+					<a href="https://music.apple.com/fr/artist/lucia-loot/1639144883"><i class="fa-brands fa-itunes-note"></i></a>
+					<a href="https://deezer.page.link/4vLcfFFzPMrFAMvR9"><i class="fa-brands fa-deezer"></i></a>
+					<a href="https://www.tiktok.com/@lucialoot"><i class="fa-brands fa-tiktok"></i></a>
+				</div>
+			</div>
+		</div>
+		
+		<img src="assets/corner_star_pink.svg" id="star4" class="star" alt=""/>
+		
+	</div>
 	
 </body>
-
-<footer>Lucia Loot © 2024</footer>
-
 </html>
