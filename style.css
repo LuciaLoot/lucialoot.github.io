@@ -206,6 +206,12 @@ a:hover {
 	pointer-events: none;	
 }
 
+@media(orientation: portrait) {
+	.returntohome{
+		font-size: 4em;
+	}
+}
+
 .returntohome a {
 	color: var(--rose);
 	pointer-events: all;
