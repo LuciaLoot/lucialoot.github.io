@@ -82,6 +82,7 @@ body {
 	transform: rotate(0.05turn) translateY(-10.5vw);
 	z-index: 1;
 	right: 0vw;
+	display: none;
 }
 
 #star3 {
