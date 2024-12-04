@@ -462,7 +462,7 @@ h3 {
 	text-align: center;
 	font-family: "Offbit_101";
 	font-weight: bold;
-	font-size: clamp(35px, 5vw, 5vw);
+	font-size: clamp(25px, 4vw, 4vw);
 	color: var(--rose);
 }
 
