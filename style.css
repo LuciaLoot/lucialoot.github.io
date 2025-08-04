@@ -1,865 +1,129 @@
-:root {
-    --black: #000000;
+@charset "utf-8";
+
+@font-face {
+	font-family: 'Offbit';
+	src: url("webfonts/OffBit-101.woff2");
+	font-weight: 100;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Offbit';
+	src: url("webfonts/OffBit-101Bold.woff2");
+	font-weight: 200;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Offbit';
+	src: url("webfonts/OffBit-Regular.woff2");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Offbit';
+	src: url("webfonts/OffBit-Bold.woff2");
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "VG5000";
+	src: url("webfonts/VG5000-Regular_web.woff2");
+}
+
+.teaser{
+	margin: 0px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	width: 100vw;
+	animation: bg_anim 0.5s infinite steps(1 ,end);
+}
+
+@keyframes bg_anim{
+	0%, 100% {
+		background: var(--white)
+	}
+	
+	25% {
+		background: var(--electric)
+	}
+	
+	50% {
+		background: var(--white)
+	}
+	
+	75% {
+		background: var(--pink)
+	}
+}
+
+.teaser_content{
+	font-size: 15vw;
+	font-weight: 700;
+	text-decoration: none;
+	color: var(--black);
+	text-align: center;
+	width:100%;
+}
+
+.teaser_content:after{
+	content: "";
+	animation: countdown 0.5s infinite steps(1 ,end);
+}
+
+@keyframes countdown{
+	0%, 100%{
+		content: "08 · 08 · 25";
+		color: black;
+	}
+	
+	25%{
+		content: "08 · 08 · 25";
+		color: white;
+	}
+	
+	50% {
+		content: "[encore]";
+		color: black;
+	}
+	
+	75% {
+		content: "[encore]";
+		color: white;
+	}
+}
+
+:root{
+	--black: #000000;
 	--electric: #3137FD;
 	--pink: #FF218B;
 	--rose: #FF90C5;
 	--white: #ffffff;
+	--base-font-size: 1.25rem;
+	--font-size-multiplier: 1.618 ;
 }
 
-@charset "utf-8";
+html {
 
-.space-grotesk-<Space Grotesk> {
-  font-family: "Space Grotesk", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-	font-family: "OffBit";
-	src: url("webfonts/OffBit-Regular.woff2");
-}
-
-@font-face {
-	font-family: "OffBit";
-	src: url("webfonts/OffBit-Bold.woff2");
-	font-weight: bold;
-}
-
-@font-face {
-	font-family: "OffBit_101";
-	src: url("webfonts/OffBit-101.woff2");
-}
-
-@font-face {
-	font-family: "OffBit_101";
-	src: url("webfonts/OffBit-101Bold.woff2");
-	font-weight: bold;
-}
-
-html{
-	/* scroll-snap-type: y mandatory; */
 	scroll-behavior: smooth;
-	margin: 0;
-	padding: 0;
-	position: relative;
-    display: flex;
-    flex-direction: column;
-	min-height: 100%;
+	scroll-snap-type: y mandatory;
 	overflow-x: hidden;
-	background-color: var(--pink);
-	width: 100vw;
-	max-width: 100%
 }
 
-body {
-    flex-grow: 1;
-    margin : 0;
-    padding : 0;
-	overflow: hidden;
-	width: 100vw;
-	max-width: 100%
+*::-webkit-scrollbar { 
+    display: none;
 }
 
-#star1 {
-	position: absolute;
-	width: 55vw;
-	transform: rotate(-0.06turn);
-	top: 5vh;
-	left: -10vw;
-	z-index: 1;
-	-webkit-animation: staranimation ease-out 4s;
-}
-
-@-webkit-keyframes staranimation {
-   0% {transform: rotate(0.04turn); width: 100vw; opacity: 0%}
- 100% {transform: rotate(-0.06turn); width: 55vw; opacity: 100%}
-}
-
-#star2 {
-	position: absolute;
-	width: 25vw;
-	transform: rotate(0.05turn) translateY(-10.5vw);
-	z-index: 1;
-	right: 0vw;
-	display: none;
-}
-
-#star3 {
-	position: absolute;
-	width: 40vw;
-	transform: rotate(-0.06turn) translateY(-22vw);
-	left: -1vw;
-	z-index: 1;
-}
-
-#star4 {
-	float: right;
-	position: absolute;
-	right: 0px;
-	bottom: 0px;
-	z-index: 1;
-	width: 40vw;
-}
-
-.scroll-align {
-  scroll-snap-align: start;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	color: var(--pink);
-}
-
-.grotesk {
-	font-family: 'Space Grotesk';
-}
-
-.offbit {
-	font-family: 'Offbit';
-}
-
-.offbit_101 {
-	font-family: 'Offbit_101';
-}
-
-.bold {
-	font-weight: bold;
-}
-
-.allcaps {
-	text-transform: uppercase;
-}
-
-.background{
-	position: relative;
-	background-color: var(--electric);
-}
-
-.background::before{
-	content: "";
-  	position: absolute;
-  	top: 0; left: 0;
-  	width: 100%; height: 100%;
-	background-image: url("assets/headervideo.webp");
-    background-size: cover;
-	background-position: 50% 50%;
-	background-repeat: no-repeat;	
-	-webkit-filter: blur(0px) opacity(75%);
-    -webkit-animation: fadein linear 2s;
-	mix-blend-mode: plus-lighter;
-}
-
-@-webkit-keyframes fadein {
-   0% {    -webkit-filter: blur(10px) opacity(0%);}
-  28% { -webkit-filter: blur(10px) opacity(0%);}
- 100% {  -webkit-filter: blur(0px) opacity(75%);}
-}
-
-.nav_container {
-	position: relative;
-	margin: 0;
-	height: 100vh;
-	width: 100%;
-	display: flex;
-    flex-direction: column;
-    justify-content : center;
-	z-index: 50;
-}
-
-.nav {
-	padding: 40px;
-	height: 100%;
-	display: flex;
-	flex-direction: column;
-	align-items: flex-end;
-	justify-content: center;	
-	z-index: 50;
-}
-
-.nav_element {
-	margin: 0;
-	text-transform: uppercase;
-	text-align: right;
-	color: white;
-	z-index: 50;
-}
-
-.nav a {
-	font-family: 'Offbit';
-	font-weight: bold;
-	font-size: min(15vh, 20vw);
-	z-index: 50;
-}
-
-.returntohome {
-	z-index: 100;
-	text-align: right;
-	position: fixed;
-	bottom: 0;
-	font-size: 2em;
-	font-family: "Offbit_101";
-	width: 100%;
-	pointer-events: none;	
-}
-
-@media(orientation: portrait) {
-	.returntohome{
-		font-size: 4em;
-	}
-}
-
-.returntohome a {
-	color: var(--rose);
-	pointer-events: all;
-	background-color: var(--electric);
-	padding: 20px;
-	border-top-left-radius: 40px;
-}
-
-.returntohome-hidden {
-	visibility: hidden;
-	transition: opacity 1s;
-	opacity: 0%;
-}
-
-.returntohome-shown {
-	visibility: visible;
-	transition: opacity 3s;
-	opacity: 80%;
-}
-
-h1 {
-	font-family: 'Offbit';
-	font-weight: normal;
-	font-size: min(10vh, 10vw);
-}
-
-h2 {
-	font-family: Offbit;
-	font-weight: bold;
-	text-transform: uppercase;
-	font-size: min(15vh, 20vw);
-	margin: 0;
-	z-index: 50;
-}
-
-h3 {
-	font-family: Offbit;
-	text-transform: uppercase;
-	font-size: min(10vh, 15vw);
-	margin: 0;
-	z-index: 50;
-	font-weight: normal;
-}
-
-.separator-small {
-	height: 20px;
-}
-
-.separator-beforelinks {
-	height: clamp(19vh, 20vh, 100px);
-}
-
-.links{
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	text-align: center;
-	flex-wrap: wrap;
-}
-
-.links a{
-	margin-left: 20px;
-	margin-top: 2vh;
-	color: white;
-	font-size: max(6vh, 2vw);
-}
-
-.links a:hover{
-	color: var(--pink);
-}
-
-.gigs-container {
-	background-color: black;
-	padding: 40px 0;
-	color: white;
-}
-
-.gigs-container h2 {
-	text-align: right;
-	margin-right: 40px;
-	margin-bottom: 40px;
-}
-
-.list_of_gigs {
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-	margin-bottom: 40px;
-}
-
-.gig {
-	scroll-snap-align: start;
-	font-size: 50px;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	margin: min(160px, 4vh) 40px;
-	padding: 40px;
-	width: calc(100% - 15vw);
-	flex-grow: 1;
-}
-
-@media (orientation: portrait) {
-	.gig {
-		flex-direction: column;
-	}left
-	
-	.date_desc {
-		margin-bottom: 20px;
-		width: 100%;
-	}
-	
-	.gig_col2 {
-		width: 100%;
-	}
-	
-	.gig_portrait_switch {
-		display: flex;
-	}
-	
-	.gig_portrait_switch a {
-		flex: 50%;
-		text-align: right;
-	}
-	
-	.gig_portrait_switch p{
-		margin-top: 1vh;
-		margin-left: 35px;
-		flex: 50%;
-		position: absolute;
-		text-align: left;
-		float: left;
-	}
-}
-
-.gig-separator {
-	height : 4px;
-	width: 100%;
-	background-color: var(--pink);
-}
-
-.gig_col {
-	margin: 0;
-	padding 0;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	
-}
-
-.date_desc {
-	display: flex;
-	flex-direction: row;
-}
-
-.gig_col1 {
-	margin-right: max(1vw, 20px);
-}
-
-.gig_col2 {
-	text-align: left;
-}
-
-.gig_col3 {
-	margin-left: max(1vw, 20px);
-	text-align: right;
-}
-
-.gig_line {
-	margin: 0;
+*{
+	-ms-overflow-style: none;
+    scrollbar-width: none;
+	margin:0;
 	padding: 0;
-}
-
-.gig_line p {
-	hyphens: auto;
-}
-
-.date {
-	font-family: "Offbit_101";
-	font-size: max(5vw, 0.8em);
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
-
-.date p {
-	height: max(5vw, 0.8em);
-}
-
-.club {
-	font-family: "Offbit";
-	font-weight: bold;
-	text-transform: uppercase;
-	font-size: max(4.5vw, 0.8em);
-	text-align: left;		
-}
-
-.event {
-	font-family: "Offbit";
-	text-transform: uppercase;
-	font-size: max(3vw, 0.6em);
-	text-align: left;
-}
-
-.adress {
-	font-family: "Space Grotesk";
-	font-weight: 300;
-	font-size: max(2vw, 0.4em);
-	text-align: left;
-}
-
-.info {
-	font-family: "Offbit_101";
-	color: var(--rose);
-	font-size: max(2.5vw, 0.6em);
-}
-
-.hours {
-	text-align: center;
-	font-family: "Space Grotesk";
-	font-weight: 100;
-	font-size: max(1.5vw, 0.3em);
-}
-
-.gigbuttons_container{
-	display: flex;
-	flex-direction: row;
-	margin: min(160px, 4vh) 40px;
-	padding: 40px;
-	justify-content: space-between;
-	align-content: center;
-	flex-wrap: wrap;
-}
-
-@media (orientation: portrait) {
-	.gigbuttons_container{
-		justify-content: space-around;
-	}
-	
-	.gigbuttons {
-		margin-left: 20px;
-		margin-right: 20px;
-	}
-}
-
-.gigbuttons {
-	text-align: center;
-	font-family: "Offbit_101";
-	font-weight: bold;
-	font-size: clamp(25px, 4vw, 4vw);
-	color: var(--rose);
-}
-
-.gigbuttons:hover {
-	color: var(--pink);
-	border-color: var(--pink);
-
-}
-
-@media (orientation: landscape) {
-	#bookme::before {
-		content:"→ ";
-	}
-	
-	#pastgigs-button::after {
-		content:" ←";
-	}
-}
-
-@media (orientation: portrait) {
-	.gigbuttons {
-		padding: 20px;
-		border-radius: 20px;
-		border: solid 4px var(--rose);
-		margin-bottom: 40px;
-	}
-	
-	.gigbuttons_container{
-		justify-content: space-around;
-		margin-bottom: -40px;
-	}
-}
-
-.hidden {
-	display: none;
-}
-
-#pastgigs {
-	opacity: 60%;
-	margin-bottom: 20px;
-}
-
-#pastgigs .hours {
-	display: none;
-}
-
-#pastgigs .info {
-	display: none;
-}
-
-#pastgigs .adress {
-	display: none;
-}
-
-#pastgigs .gig {
-	margin-top: 15px;
-	margin-bottom: 10px;
-}
-
-.tba .date  {
-	width: 10vw;
-}
-
-.tba .date p:first-of-type::after {
-	content: "";
-	animation: tbadate 0.5s infinite forwards linear;
-}
-
-@keyframes tbadate {
-  0% {content: "!#";}
- 10% {content: "?*";}
- 20% {content: "/?";}
- 30% {content: "[+";}
- 40% {content: "+#";}
- 50% {content: "=@";}
- 60% {content: "?[{";}	
- 70% {content: ")*";}	
- 80% {content: "&<";}	
- 90% {content: ";*";}	
-100% {content: "?%";}
-}
-
-
-.tba .event::after {
-	content: "";
-	animation: tbaevent 0.5s infinite forwards linear;
-}
-
-@keyframes tbaevent {
-  0% {content: "?%[[/;$+";}
- 10% {content: "*-*[{;*+";}	
- 20% {content: "%=@*{?=)";}	
- 30% {content: "#[?<=*;%";}	
- 40% {content: "*$[*%@;%";}	
- 50% {content: "!#[;+{=@";}
- 60% {content: "#*[*+@##";}
- 70% {content: ">;?#)&[?";}
- 80% {content: ";>&[{@/;";}
- 90% {content: "*#+*;[-*";}
-100% {content: "#*@+#?+#";}
-}
-
-.tba .hours {
-	display: none;
-}
-
-.tba .info {
-	display: none;
-}
-
-.tba .adress {
-	display: none;
-}
-
-
-.music-container {
-	background-color: white;
-	padding: 40px;
-	color: black;
-	padding-bottom: 14vw;
-}
-
-.music-container h2 {
-	text-align: left;
-}
-
-.music-container h3 {
-	margin-top: 40px;
-	margin-bottom: 20px;
-}
-
-.releases-container {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	margin-bottom: 80px;
-	justify-content: flex-start;
-}
-
-.mixes-container {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	margin-bottom: 80px;
-	justify-content: flex-start;
-}
-
-.release {
-	width: 400px;
-	padding-right: 20px;
-	margin-bottom: 20px;
-}
-
-.mix {
-	width: 400px;
-	padding-right: 20px;
-	margin-bottom: 20px;
-}
-
-@media(orientation: portrait) {
-	.releases-container {
-		flex-direction: column;
-		flex-wrap: nowrap;
-	}
-	
-	.release {
-		width: 100%;
-		margin-bottom: 60px;
-	}
-	
-	.mixes-container {
-		flex-direction: column;
-		flex-wrap: nowrap;
-	}
-	
-	.mix {
-		width: 100%;
-		margin-bottom: 60px;
-	}
-	
-	#mixes-bigtitle {
-		margin-top: -60px;
-	}
-}
-
-.release img{
-	width:100%;
-}
-
-.mix img{
-	width:100%;
-}
-
-.release-info {
-	margin-top: 20px;
-	display: flex;
-	flex-direction: column;
-}
-
-.mix-info {
-	margin-top: 20px;
-	display: flex;
-	flex-direction: column;
-}
-
-.release-title {
-	font-family: "Offbit";
-	font-weight: bold;
-	font-size: 4em; 
-	margin: 0 0 0 0;
-	text-align: left;
-	width: 100%;
-}
-
-.mix-title {
-	font-family: "Offbit";
-	font-weight: bold;
-	font-size: 4em; 
-	margin: 0 0 0 0;
-	text-align: left;
-	width: 100%;
-}
-
-.mix-number {
-	font-family: "Offbit_101";
-	font-weight: normal;
-}
-
-.mix-link {
-	font-size: 4em;
-	font-family: "Offbit_101";
-	color: black;
-	text-align: center;
-	padding-top: 10px;
-	border: 4px solid var(--pink);
-	border-radius: 40px;
-}
-
-.mix-link:hover {
-	color: var(--pink);
-}
-
-.release-date_links {
-	width: 100%;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: flex-start;
-	align-items: baseline;
-}
-
-.release-date {
-	font-family: "Offbit_101";
-	font-size: 3em;
-	margin: 0 20px 0 0;
-	text-align: left;
-}
-
-.release-links {
-	margin: 0 0 0 -20px;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: flex-start;
-}
-
-.release-links a {
-	color: var(--pink);
-	font-size: 3em;
-	margin-left: 20px;
-}
-
-.release-links a:hover {
-	color: var(--rose);
-}
-
-.about-container {
-	background-color: var(--electric);
-	padding: 40px;
-	color: white;
-	overflow: hidden;
-}
-
-.about-container h2 {
-	text-align: right;
-}
-
-#biophoto {
-	width: max(20vw, 30em);
-	float: left;
-	margin: 40px;
-	margin-top: 80px;
-	margin-right: 80px;
-	z-index: 50;
-}
-
-
-.quote {
-	font-family: "Offbit";
-	font-size: 10vw;
-	margin-top: 80px;
-	margin-bottom: 20px;
-	font-style: italic;
-	z-index: 50;
-	hyphens: auto;
-}
-
-.bio {
-	font-family: "Space Grotesk";
-	font-size: min(3.5vh, 5vw);
-	z-index: 50;
-	text-align: justify;
-	margin-right: 40px;
-	margin-left: 40px;
-	position: relative;
-}
-
-.empha-size {
-	font-size: min(4vh, 6vw)
-}
-
-
-@media (orientation: portrait) {
-	#biophoto {
-		margin: 0px;
-		margin-top: 40px;
-		float: none;
-		width: calc(100vw - 80px);
-		left: 50%;
-	}
-	
-	.quote {
-		margin-top: 40px;
-		font-size: 14vw;
-		margin-left: 20px;
-		margin-right: 20px;
-	}
-	
-	.bio {
-		margin-top: 40xp;
-		margin-left: 20px;
-		margin-right: 20px;
-	}
-	
-	.footer_links {
-		margin: 0 -20px;
-	}
-	
-	.footer {
-		margin-bottom: 160px;
-	}
-	
-	.footer p {
-		margin-left: 20px;
-		padding-right: 40px;
-	}
-}
-
-.footer {
-	margin-top: 160px;
-	margin-bottom: 40px;
-	width: 100%;
-	text-align: left;
-	font-family: "Offbit_101";
-	font-weight: bold;
-	font-size: max(4vh, 2vw);
-	color: var(--rose);
-	overflow: hidden;
-}
-
-.footer p {
-	margin-left: 40px;
-	margin-bottom: calc(-2vh + 20px);
-}
-
-.footer_container {
-	width: 100%;
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-}
-
-.footer_links {
-	display: flex;
-	align-items: center;
-	text-align: center;
-	flex-wrap: wrap;
-	margin: 0 20px;
-}
-
-.footer_links a {
-	margin-left: 20px;
-	margin-right: 20px;
-	margin-top: 2vh;
-	color: var(--rose);
-	font-size: max(6vh, 2vw);
-	z-index: 50;
-}
-
-.footer_links a:hover{
-	color: var(--pink);
+	font-family: 'Offbit';
+	font-style: normal;
+	font-size: var(--base-font-size);
 }
