@@ -1,15 +1,340 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>:･ﾟ✧* Lucia Loot ✧･ﾟ:</title>
-<link href="style.css" rel="stylesheet" type="text/css">
+	<!--GENERAL HTML STUFF-->
+	<meta charset="utf-8">
+	<title>:･ﾟ✧* Lucia Loot ✧･ﾟ:</title>
+	<link href="style.css" rel="stylesheet" type="text/css">
+	
+	<!--TABLE SORT SCRIPT-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.1.0/tablesort.min.js"></script>
+	<script src="script.js"></script>
+	
 </head>
 
+<div class="scroll-helper">
+	<p>SCROLL ↕</p>
+</div>
+
 <body>
-	<div class="teaser">
-		<a href="https://instagram.com/lootlucia/" class="teaser_content">
-		</a>
+	<div class="section_header scroll-snap-s">
+		
+		<div class="nav_container">
+			<div class="nav_element">
+				<h2 class="nav_title music">MUSIC</h2>
+				<div class="nav_list_container" id="music">
+					<div class = "nav_list">
+						<a href="https://soundcloud.com/lucialoot">soundcloud</a>
+						<a href="https://lucialoot.bandcamp.com/">bandcamp</a>
+						<a href="https://open.spotify.com/intl-fr/artist/6XIWHXeg8RwsgRdb3XHTdd">spotify</a>
+						<a href="https://music.apple.com/fr/artist/lucia-loot/1639144883">apple_music</a>
+						<a href="https://www.deezer.com/fr/artist/179556887">deezer</a>
+					</div>
+				</div>
+			</div>
+			
+			<div class="rainbow-border"></div>
+
+			<div class="nav_element">
+				<h2 class="nav_title socials">SOCIALS</h2>
+				<div class="nav_list_container" id="socials">
+					<div class = "nav_list">
+						<a href="https://www.instagram.com/lootlucia">instagram [@lootlucia]</a>
+						<a href="https://www.tiktok.com/@lucialoot">tiktok [@lucialoot]</a>
+						<a href="mailto:lucialoot.mgmt@gmail.com">email for bookings</a>
+					</div>
+				</div>
+			</div>
+			
+			<div class="rainbow-border"></div>
+			
+			<div class="nav_element">
+				<a href="avantencoreencore.html"><h2 class="nav_title rainbow avantencore" href="">avant encore [encore]</h2></a>
+				<div class="nav_list_container" id="avantencore">
+					<div class = "nav_list">
+						<a href="avantencoreencore.html" class="rainbow">→ my latest release</a>
+					</div>
+				</div>
+				
+			</div>
+			
+		</div>
+		
+		<h1>	</h1>
 	</div>
+	
+	<div class="section_mixes scroll-snap-s">
+		<h2>LATEST MIXES:</h2>
+
+		<div class="mixes_container scroller">
+			<div class="mixes">
+				
+				<div class="mix">
+					<div class="mix_inner-div">
+						<iframe class="player" src="https://www.youtube.com/embed/HFc2Yko6NUs?si=ixgxsizcFuQV-kSM&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+						<h3>RINSE FRANCE<br>↘ 24.07.25</h3>
+					</div>
+				</div>
+				
+				<div class="mix">
+					<div class="mix_inner-div">
+						<iframe class="player" src="https://www.youtube-nocookie.com/embed/A0W0kOvTUiQ?si=bdBLfXfGfat6BRxD&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+						<h3>MIA MAO LIVE<br>↘ 16.04.25</h3>
+					</div>
+				</div>
+				
+				<!--div class="mix">
+					<div class="mix_inner-div">
+						<iframe class="player" width="100%" height="600" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2082464346&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+						<h3>LA CHIKH B2B LUCIA LOOT LIVE @ RENATE RED ROOM (BERLIN)<br>↘ xx.xx.25</h3>
+					</div>
+				</div-->
+				
+			</div>
+		</div>
+		
+	</div>
+	
+	<div class="section_gigs scroll-snap-s">
+		<h2>PAST AND FUTURE GIGS:</h2>
+		<div class="gigs_container">
+			<div class="gigs">
+				<table id="gigs_table">
+					<thead>
+						<tr data-sort-method="none" class="gigs_headers">
+							<th>Date</th>
+							<th>Club</th>
+							<th>Event</th>
+							<th>City</th>
+						</tr>
+					</thead>
+					
+					<div class="heading_spacer"></div>
+
+					<tbody>
+						
+						<tr>
+							<td>2025-09-06</td>
+							<td>Prairie du Canal</td>
+							<td>Open Air ~ Vénus Club &amp; Pépite En Piste [B2B Clo &amp; Ody]</td>
+							<td>Bobigny (FR)</td>
+						</tr>
+
+						<tr>
+							<td>2025-08-30</td>
+							<td>TBA</td>
+							<td>TBA</td>
+							<td>Nanterre (FR)</td>
+						</tr>
+
+						<tr>
+							<td>2025-06-28</td>
+							<td>Le Cabaret des Merveilles</td>
+							<td>Pride Afterparty</td>
+							<td>Paris (FR)</td>
+						</tr>
+
+						<tr>
+							<td>2025-06-27</td>
+							<td>Le Cabaret des Merveilles</td>
+							<td>La Kin’K</td>
+							<td>Paris (FR)</td>
+						</tr>
+
+						<tr>
+							<td>2025-06-21</td>
+							<td>Comptoir Club</td>
+							<td>Fête De La Musique : Vénus Club </td>
+							<td>Paris (FR)</td>
+						</tr>
+
+						<tr>
+						<td>2025-06-14</td>
+						<td>Macki Music Festival (Boat Party)</td>
+						<td>Macki Music Festival — Last Dance</td>
+						<td>Paris / Bobigny (FR)</td>
+						</tr>
+
+						<tr>
+						<td>2025-05-31</td>
+						<td>La Petite Rade</td>
+						<td>Helios s/ Mer</td>
+						<td>Le Havre (FR)</td>
+						</tr>
+
+						<tr>
+						<td>2025-05-24</td>
+						<td>Stolen Garage</td>
+						<td>Matin. Présente : S05 : Fat Tire Conspiracy</td>
+						<td>Le Pré-Saint-Gervais (FR)</td>
+						</tr>
+
+						<tr>
+						<td>2025-05-09</td>
+						<td>Le Cabaret des Merveilles</td>
+						<td>—</td>
+						<td>Paris (FR)</td>
+						</tr>
+
+						<tr>
+						<td>2025-05-03</td>
+						<td>Le Hasard Ludique</td>
+						<td>Brillant Bruyant</td>
+						<td>Paris (FR)</td>
+						</tr>
+
+						<tr>
+						<td>2025-04-12</td>
+						<td>Les Amarres</td>
+						<td>Crash (Par Heresy)</td>
+						<td>Paris (FR)</td>
+						</tr>
+
+						<tr>
+						<td>2025-03-14</td>
+						<td>À La Folie</td>
+						<td>Vénus Club : 4 Years Anniversary</td>
+						<td>Paris (FR)</td>
+						</tr>
+
+						<tr>
+							<td>2025-03-08</td>
+							<td>Renate (Red Room)</td>
+							<td>Renate X International Women's Day with Khloe, VINVAR, Killa, Vickies, Snooks, Skankstasy</td>
+							<td>Berlin (DE)</td>
+						</tr>
+
+						<tr>
+							<td>2025-02-22</td>
+							<td>Le Cabaret des Merveilles</td>
+							<td>—</td>
+							<td>Paris (FR)</td>
+						</tr>
+
+						<tr>
+							<td>2025-02-07</td>
+							<td>Le Pavillon des Canaux</td>
+							<td>La Coloc #1 : Bavardages Invite Brillant Bruyant</td>
+							<td>Paris (FR)</td>
+						</tr>
+
+						<tr>
+							<td>2025-01-16</td>
+							<td>La Planque</td>
+							<td>Mental Queer 2 Concupiscentia</td>
+							<td>Paris (FR)</td>
+						</tr>
+
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	
+	<div class="section_mixedfor scroll-snap-se">
+		<h2>HAS MIXED FOR:</h2>
+		<div class="slider_container">
+			<div class="slider">
+				<div class="slide-track">
+					<div class="slide"><img src="assets/mixedfor_logos/mixedfor_logo_-17.webp" alt=""/></div>
+					<div class="slide"><img src="assets/mixedfor_logos/mixedfor_logo_-18.webp" alt=""/></div>
+					<div class="slide"><img src="assets/mixedfor_logos/mixedfor_logo_-01.webp" alt=""/></div>
+					<div class="slide"><img src="assets/mixedfor_logos/mixedfor_logo_-02.webp" alt=""/></div>
+					<div class="slide"><img src="assets/mixedfor_logos/mixedfor_logo_-03.webp" alt=""/></div>
+					<div class="slide"><img src="assets/mixedfor_logos/mixedfor_logo_-04.webp" alt=""/></div>
+					<div class="slide"><img src="assets/mixedfor_logos/mixedfor_logo_-05.webp" alt=""/></div>
+					<div class="slide"><img src="assets/mixedfor_logos/mixedfor_logo_-06.webp" alt=""/></div>
+					<div class="slide"><img src="assets/mixedfor_logos/mixedfor_logo_-07.webp" alt=""/></div>
+					<div class="slide"><img src="assets/mixedfor_logos/mixedfor_logo_-08.webp" alt=""/></div>
+					<div class="slide"><img src="assets/mixedfor_logos/mixedfor_logo_-09.webp" alt=""/></div>
+					<div class="slide"><img src="assets/mixedfor_logos/mixedfor_logo_-10.webp" alt=""/></div>
+					<div class="slide"><img src="assets/mixedfor_logos/mixedfor_logo_-11.webp" alt=""/></div>
+					<div class="slide"><img src="assets/mixedfor_logos/mixedfor_logo_-12.webp" alt=""/></div>
+					<div class="slide"><img src="assets/mixedfor_logos/mixedfor_logo_-13.webp" alt=""/></div>
+					<div class="slide"><img src="assets/mixedfor_logos/mixedfor_logo_-14.webp" alt=""/></div>
+					<div class="slide"><img src="assets/mixedfor_logos/mixedfor_logo_-15.webp" alt=""/></div>
+					<div class="slide"><img src="assets/mixedfor_logos/mixedfor_logo_-16.webp" alt=""/></div>
+					<div class="slide"><img src="assets/mixedfor_logos/mixedfor_logo_-17.webp" alt=""/></div>
+					<div class="slide"><img src="assets/mixedfor_logos/mixedfor_logo_-18.webp" alt=""/></div>
+					<div class="slide"><img src="assets/mixedfor_logos/mixedfor_logo_-01.webp" alt=""/></div>
+					<div class="slide"><img src="assets/mixedfor_logos/mixedfor_logo_-02.webp" alt=""/></div>
+					<div class="slide"><img src="assets/mixedfor_logos/mixedfor_logo_-03.webp" alt=""/></div>
+					<div class="slide"><img src="assets/mixedfor_logos/mixedfor_logo_-04.webp" alt=""/></div>
+					<div class="slide"><img src="assets/mixedfor_logos/mixedfor_logo_-05.webp" alt=""/></div>
+					<div class="slide"><img src="assets/mixedfor_logos/mixedfor_logo_-06.webp" alt=""/></div>
+					<div class="slide"><img src="assets/mixedfor_logos/mixedfor_logo_-07.webp" alt=""/></div>
+					<div class="slide"><img src="assets/mixedfor_logos/mixedfor_logo_-08.webp" alt=""/></div>
+					<div class="slide"><img src="assets/mixedfor_logos/mixedfor_logo_-09.webp" alt=""/></div>
+					<div class="slide"><img src="assets/mixedfor_logos/mixedfor_logo_-10.webp" alt=""/></div>
+					<div class="slide"><img src="assets/mixedfor_logos/mixedfor_logo_-11.webp" alt=""/></div>
+					<div class="slide"><img src="assets/mixedfor_logos/mixedfor_logo_-12.webp" alt=""/></div>
+					<div class="slide"><img src="assets/mixedfor_logos/mixedfor_logo_-13.webp" alt=""/></div>
+					<div class="slide"><img src="assets/mixedfor_logos/mixedfor_logo_-14.webp" alt=""/></div>
+					<div class="slide"><img src="assets/mixedfor_logos/mixedfor_logo_-15.webp" alt=""/></div>
+					<div class="slide"><img src="assets/mixedfor_logos/mixedfor_logo_-16.webp" alt=""/></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="section_bio scroll-snap-s">
+		<h2>BIO:</h2>
+		<div class="bio_container">
+			
+		  <div class="bio_columns">
+			
+				<div class="bio_text">
+					<p class="lan">EN</p>
+					<p><strong>Lucia Loot</strong> is a <strong>French-Dutch producer and DJ </strong>based in <strong>Paris</strong>. First known as a Hyperpop singer and producer with her first album <strong>AVANT ENCORE (2023)</strong>, she has since taken a turn towards bass music and UKG with its remixed version <strong>avant encore [encore] (2025)</strong>. Her tracks and DJ sets pay homage to a diversity of sounds: UK basses and wobbles, distortion-driven Dubstep, modern D&amp;B, old-school Jungle, saturated and hybridized Baile Funk, and Hyperpop queeriosities. Member of the French collectives <strong>Venus Club</strong> [feminist collective] and <strong>Brillant Bruyant</strong> [queer bass music], she’s an active and militant member of the Parisian nightlife and bass music scene(s).</p>
+					<p class="lan"><br>FR</p>
+					<p><strong>Lucia Loot</strong> est une <strong>productrice et DJ franco-néerlandaise</strong> basée à <strong>Paris</strong>. D'abord connue comme chanteuse et productrice Hyperpop avec son premier album <strong>AVANT ENCORE (2023)</strong>, elle a depuis amorcé un tournant vers la bass music et la UK Garage avec sa version remixée <strong>avant encore [encore] (2025)</strong>. Ses morceaux et DJ sets rendent hommage à une diversité de sons : basses et wobbles UK, Dubstep distordue, D&amp;B moderne, Jungle old-school, Baile Funk saturée et hybridée, et queeriosités Hyperpop. Membre des collectifs français <strong>Vénus Club</strong> [collectif féministe] et <strong>Brillant Bruyant</strong> [bass music queer], elle est un membre actif et militant des soirées parisiennes et de la scène bass music.</p>
+				</div>
+
+				<img class="bio_image" src="assets/bio_photo.jpg" alt=""/>
+			  	
+			</div>
+		</div>
+	</div>
+	
+	<div class="section_gallerywall scroll-snap-se">
+		<h2>PRESS PHOTOS:</h2>
+		<div class="gallerywall_subtitle">
+			<a href="https://www.instagram.com/woxilde">Gaïa Nunez © 2025 (IG : @woxilde)</a>
+			<a href="https://drive.google.com/drive/folders/1_HhG_Pa-xrmNzGW0lEXLvNUPpMmpP5z1?usp=sharing">download high-res versions here</a>
+		</div>
+		<div class="gallerywall_container">
+			<div class="gallerywall">
+		    	<img src="assets/press_photos/1.webp" alt=""/>
+				<img src="assets/press_photos/2.webp" alt=""/>
+				<img src="assets/press_photos/3.webp" alt=""/>
+				<img src="assets/press_photos/4.webp" alt=""/>
+				<img src="assets/press_photos/5.webp" alt=""/>
+				<img src="assets/press_photos/6.webp" alt=""/>
+				<img src="assets/press_photos/7.webp" alt=""/>
+				<img src="assets/press_photos/8.webp" alt=""/>
+				<img src="assets/press_photos/9.webp" alt=""/>
+				<img src="assets/press_photos/10.webp" alt=""/>
+				<img src="assets/press_photos/11.webp" alt=""/>
+				<img src="assets/press_photos/12.webp" alt=""/>
+				<img src="assets/press_photos/13.webp" alt=""/>
+				<img src="assets/press_photos/14.webp" alt=""/>
+				<img src="assets/press_photos/15.webp" alt=""/>
+				<img src="assets/press_photos/16.webp" alt=""/>
+				<img src="assets/press_photos/17.webp" alt=""/>
+				<img src="assets/press_photos/18.webp" alt=""/>
+				<img src="assets/press_photos/19.webp" alt=""/>
+				<img src="assets/press_photos/20.webp" alt=""/>
+				<img src="assets/press_photos/21.webp" alt=""/>
+				<img src="assets/press_photos/22.webp" alt=""/>
+				<img src="assets/press_photos/23.webp" alt=""/>
+				<img src="assets/press_photos/24.webp" alt=""/>
+			</div>
+		</div>
+	</div>
+	
 </body>
+	
+<footer class="scroll-snap-e">
+	<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Website by Lucia Loot © 2025</a>
+</footer>
 </html>
